@@ -30,7 +30,7 @@ let food = "kebab";
 let pets = 1;
 
 // 10 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
-let friendsPets = 2;
+let friendsPets = 5;
 
 // 11 - Add two pets to your `pets` variable
 pets += 2; 
@@ -71,14 +71,27 @@ if (pets < allowedPets)  {
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
-
+let mostPets;
+if (pets < friendsPets)
+    mostPets = friendsPets;
+if (pets > friendsPets)
+    mostPets = pets;
+console.log(mostPets);
 
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
-
-
+switch (pets < friendsPets) {
+    case 1: 
+        mostPets = friendsPets;
+        break;
+    case 0: 
+        mostPets = pets;
+        break;
+}
+console.log(mostPets);
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
-
+mostPets = (pets < friendsPets) ? friendsPets : pets
+console.log(mostPets);
 
 
 
